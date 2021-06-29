@@ -12,6 +12,7 @@ body {
 
 .title {
 	color: #19bc8b;
+	font-size: 50px;
 }
 .prng {
 	-webkit-transition: -webkit-transform 0.3s ease-in-out;
