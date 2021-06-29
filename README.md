@@ -1,6 +1,6 @@
-<img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="28" width="130"></a>
+## Pseudorandom number generator visualizer
 
-# PRNG Visualizer
+![Logo](./Screenshots/Logo.png)
 
 ###### Visualize various Pseudorandom number generators!
 
