@@ -1,11 +1,14 @@
-let j = 5, k = 17, m = Math.pow(2, 32), seed = 64211615387315687894313546846513546846893;
-
+let j = 3, k = 7, m = Math.pow(2, 32), seed = 18578318535451054;
+seed = seed.toString().split('');
+seed = seed.map(num => {
+  return parseInt(num)
+})
 function nextRand() {
-  let n = seed.toString().split('')
-  let num1 = parseInt(n[j - 1]), num2 = parseInt(n[k - 1]);
+  let num1 = seed[j - 1];
+  let num2 = seed[k - 1];
   let random = (num1 + num2) % m;
-  seed = (seed.toString() + random.toString()).substring(1)
-  console.log(random, seed)
+  seed.push(random)
+  seed.shift()
   return random
 }
 
@@ -24,7 +27,7 @@ function draw() {
     }
   }
   y++;
-  if (y < 600) {
+  if (y < 800) {
     requestAnimationFrame(draw);
   }
 }
