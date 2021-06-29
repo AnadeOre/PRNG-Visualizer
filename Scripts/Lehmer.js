@@ -5,6 +5,10 @@ const aInput = document.getElementById('a')
 const mInput = document.getElementById('m')
 const seedInput = document.getElementById('seed')
 
+function refresh() {
+  window.location.reload(false)
+}
+
 function runLehmer() {
   a = aInput.valueAsNumber;
   m = mInput.valueAsNumber;

@@ -7,6 +7,9 @@ const kInput = document.getElementById('k')
 const mInput = document.getElementById('m')
 const seedInput = document.getElementById('seed')
 
+function refresh() {
+  window.location.reload(false)
+}
 
 function runFibonacci() {
   j = parseInt(jInput.value);

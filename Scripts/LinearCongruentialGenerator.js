@@ -6,6 +6,10 @@ const cInput = document.getElementById('c')
 const mInput = document.getElementById('m')
 const seedInput = document.getElementById('seed')
 
+function refresh() {
+  window.location.reload(false)
+}
+
 function runLCG() {
   a = aInput.valueAsNumber;
   c = cInput.valueAsNumber;

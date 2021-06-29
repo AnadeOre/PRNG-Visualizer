@@ -1,9 +1,11 @@
-//let seed = 1111111111;
-
 let canvas = document.getElementById('canvas')
 let context = canvas.getContext('2d');
 let seed, digits;
 const seedInput = document.getElementById('seed')
+
+function refresh() {
+  window.location.reload(false)
+}
 
 function runLCG() {
   seed = seedInput.valueAsNumber;
