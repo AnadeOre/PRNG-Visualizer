@@ -11,11 +11,10 @@ function refresh() {
 }
 
 function runLCG() {
-  a = aInput.valueAsNumber;
-  c = cInput.valueAsNumber;
-  m = mInput.valueAsNumber;
-  seed = seedInput.valueAsNumber;
-  context.clearRect(0, 0, 800, 800)
+  a = parseInt(aInput.value);
+  c = parseInt(cInput.value);
+  m = parseInt(mInput.value);
+  seed = parseInt(seedInput.value);
   draw()
 }
 
