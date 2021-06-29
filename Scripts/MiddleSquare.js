@@ -1,5 +1,15 @@
-let seed = 1111111111;
-const digits = seed.toString().split('').length;
+//let seed = 1111111111;
+
+let canvas = document.getElementById('canvas')
+let context = canvas.getContext('2d');
+let seed, digits;
+const seedInput = document.getElementById('seed')
+
+function runLCG() {
+  seed = seedInput.valueAsNumber;
+  digits = seed.toString().split('').length;
+  draw()
+}
 
 function nextRand() {
   let n = (seed * seed).toString();

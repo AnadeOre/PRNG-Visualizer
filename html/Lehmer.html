@@ -9,14 +9,18 @@
 		<title>Lehmer</title>
 	</head>
 	<body>
-		<span class="title">Lehmer</span>
+		<a href="../index.html" class="title">Lehmer</a>
+		<p class="suggestion">
+			Suggested values: <span class="bold-suggestion">a = 16843009</span>,
+			<span class="bold-suggestion">m = 4294967296</span>
+		</p>
 		<div class="container">
 			<form>
 				<input type="number" name="a" id="a" placeholder="a" />
-				<input type="number" name="m" id="m" placeholder="m" value="4294967296" />
+				<input type="number" name="m" id="m" placeholder="m" />
 				<input type="number" name="seed" id="seed" placeholder="seed" />
 			</form>
-			<button onclick="Runn()">Draw</button>
+			<button onclick="runLehmer()">Draw</button>
 		</div>
 		<canvas id="canvas" width="800" height="600"></canvas>
 	</body>

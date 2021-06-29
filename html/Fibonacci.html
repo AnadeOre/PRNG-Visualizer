@@ -5,12 +5,25 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="../Scripts/Fibonacci.js" defer></script>
+		<link rel="stylesheet" href="style.css" />
 		<title>Fibonacci</title>
 	</head>
 	<body>
-		<h1>Fibonacci</h1>
-		<button onclick="draw()">Draw</button>
-		<p>Using Fibonacci Method</p>
-		<canvas id="canvas" width="800" height="800"></canvas>
+		<a href="../index.html" class="title">Fibonacci</a>
+		<p class="suggestion">
+			Suggested values: <span class="bold-suggestion">j = 3</span>,
+			<span class="bold-suggestion">k= 7</span>
+			<span class="bold-suggestion">m = 4294967296</span>
+		</p>
+		<div class="container">
+			<form>
+				<input type="number" name="j" id="j" placeholder="j" />
+				<input type="number" name="k" id="k" placeholder="k" />
+				<input type="number" name="m" id="m" placeholder="m" />
+				<input type="number" name="seed" id="seed" placeholder="seed" />
+			</form>
+			<button onclick="draw()">Draw</button>
+		</div>
+		<canvas id="canvas" width="800" height="600"></canvas>
 	</body>
 </html>
