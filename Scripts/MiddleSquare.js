@@ -7,7 +7,7 @@ function refresh() {
   window.location.reload(false)
 }
 
-function runLCG() {
+function runMiddleSquare() {
   seed = seedInput.valueAsNumber;
   digits = seed.toString().split('').length;
   draw()
@@ -28,9 +28,6 @@ function nextRandFloat() {
   return nextRand() / 9999999999;
 }
 
-
-let canvas = document.getElementById('canvas')
-let context = canvas.getContext('2d');
 
 let y = 0;
 function draw() {
