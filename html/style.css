@@ -20,7 +20,7 @@ body {
 }
 
 .title:hover {
-	color: #1973bc;
+	color: #e9bc8b;
 	font-size: 45px;
 }
 
@@ -53,7 +53,7 @@ input {
 }
 
 button {
-	color: white;
+	color: #e9bc8b;
 	background-color: transparent;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -64,14 +64,15 @@ button {
 	line-height: 40px;
 	border: 2px solid #19bc8b;
 	transition: 0.25s;
-	box-shadow: 0.3em 0.3em 0 0 #19bc8b, inset 0.3em 0.3em 0 0 #19bc8b;
+	box-shadow: -0.3em -0.3em #e9bc8b;
 	font-weight: bold;
 	font-size: 13px;
 }
 
 button:hover {
-	box-shadow: 0 0 0 0 #1973bc, inset 6em 3.5em 0 0 #1973bc;
-	border-color: #1973bc;
+	color: #1c222b;
+	box-shadow: 0 0 0 0 #e9bc8b, inset 6em 3.5em 0 0 #e9bc8b;
+	border-color: #e9bc8b;
 }
 
 canvas {
