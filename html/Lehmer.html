@@ -5,12 +5,19 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="../Scripts/Lehmer.js" defer></script>
+		<link rel="stylesheet" href="style.css" />
 		<title>Lehmer</title>
 	</head>
 	<body>
-		<h1>Lehmer</h1>
-		<button onclick="draw()">Draw</button>
-		<p>Using Lehmer's Method</p>
+		<span class="title">Lehmer</span>
+		<div class="container">
+			<form>
+				<input type="number" name="a" id="a" placeholder="a" />
+				<input type="number" name="m" id="m" placeholder="m" value="4294967296" />
+				<input type="number" name="seed" id="seed" placeholder="seed" />
+			</form>
+			<button onclick="Runn()">Draw</button>
+		</div>
 		<canvas id="canvas" width="800" height="600"></canvas>
 	</body>
 </html>
