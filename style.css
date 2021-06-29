@@ -8,6 +8,7 @@ body {
 	align-items: center;
 	height: 100vh;
 	justify-content: center;
+	font-family: monospace;
 }
 
 .title {
@@ -44,6 +45,8 @@ a {
 	border: 2px solid #19bc8b;
 	transition: 0.25s;
 	box-shadow: 0.3em 0.3em 0 0 #19bc8b, inset 0.3em 0.3em 0 0 #19bc8b;
+	font-weight: bold;
+	font-size: 15px;
 }
 
 a:hover {
