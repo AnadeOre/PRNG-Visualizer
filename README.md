@@ -1,19 +1,19 @@
 ## Pseudorandom number generator visualizer
 
-![Logo](./Screenshots/Logo.png)
+![Logo](./Assets/Logo.png)
 
 ###### Visualize various Pseudorandom number generators!
 
 Select the method you want to visualize:
 
-![MainScreen](./Screenshots/Main.png)
+![MainScreen](./Assets/Main.png)
 
 Play with the values, click "Draw" and see the magic!
 
-![Lehmer](./Screenshots/Lehmer.JPG)
+![Lehmer](./Assets/Lehmer.JPG)
 
 Click the name to go back to homepage and play with another one!
-![Recipie2](./Screenshots/Magic.JPG)
+![Recipie2](./Assets/Magic.JPG)
 
 ## Live version
 
