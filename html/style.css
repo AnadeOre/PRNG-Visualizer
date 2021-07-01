@@ -24,6 +24,12 @@ body {
 	font-size: 45px;
 }
 
+.button-home {
+	position: absolute;
+	top: 25px;
+	left: 20px;
+}
+
 .container {
 	margin-top: 30px;
 	display: flex;
@@ -52,7 +58,8 @@ input {
 	margin: 2px;
 }
 
-button {
+button,
+.button-home {
 	color: #e9bc8b;
 	background-color: transparent;
 	text-decoration: none;
@@ -69,7 +76,8 @@ button {
 	font-size: 13px;
 }
 
-button:hover {
+button:hover,
+.button-home:hover {
 	color: #1c222b;
 	box-shadow: 0 0 0 0 #e9bc8b, inset 6em 3.5em 0 0 #e9bc8b;
 	border-color: #e9bc8b;
