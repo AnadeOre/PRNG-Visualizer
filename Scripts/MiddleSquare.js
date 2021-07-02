@@ -33,11 +33,15 @@ let y = 0;
 function draw() {
   for (let x = 0; x < 800; x++) {
     if (nextRandFloat() < 0.5) {
+      context.fillStyle = 'black'
       context.fillRect(x, y, 1, 1);
+    } else {
+      context.fillStyle = 'white'
+      context.fillRect(x, y, 1, 1)
     }
   }
   y++;
   if (y < 600) {
-    requestAnimationFrame(draw);
+    requestAnimationFrame(() => { draw() });
   }
 }
