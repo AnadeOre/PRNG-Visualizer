@@ -25,7 +25,7 @@ function nextRand() {
 }
 
 function nextRandFloat() {
-  return nextRand() / 9999999999;
+  return nextRand() / digits;
 }
 
 
