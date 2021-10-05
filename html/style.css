@@ -93,7 +93,7 @@ button:hover,
 }
 
 canvas {
-	margin-top: 20px;
+	margin: 20px auto;
 }
 
 @media (min-width: 900px) {
