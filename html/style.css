@@ -9,6 +9,7 @@ body {
 	justify-content: center;
 	font-family: monospace;
 }
+
 .title {
 	color: #19bc8b;
 	-webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -16,7 +17,7 @@ body {
 	transition: all 0.1s ease-in-out;
 	font-size: 40px;
 	text-decoration: none;
-	margin: 20px auto;
+	margin: 70px auto 10px;
 }
 
 .title:hover {
@@ -36,6 +37,8 @@ body {
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	width: 80vw;
+	margin: auto;
 }
 
 .suggestion {
@@ -43,6 +46,8 @@ body {
 	font-size: 20px;
 	margin: 5px;
 	text-align: center;
+	width: 80vw;
+	justify-self: center;
 }
 
 .bold-suggestion {
@@ -83,6 +88,16 @@ button:hover,
 	border-color: #e9bc8b;
 }
 
+.button-home {
+	margin: auto;
+}
+
 canvas {
 	margin-top: 20px;
+}
+
+@media (min-width: 900px) {
+	.title {
+		margin: auto;
+	}
 }

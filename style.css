@@ -13,7 +13,8 @@ body {
 
 .title {
 	color: #19bc8b;
-	font-size: 50px;
+	font-size: 10vw;
+	text-align: center;
 }
 .prng {
 	-webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -38,7 +39,7 @@ a {
 	text-decoration: none;
 	text-transform: uppercase;
 	margin: 8px;
-	width: 200px;
+	width: 80vw;
 	height: 50px;
 	text-align: center;
 	line-height: 50px;
@@ -53,4 +54,16 @@ a:hover {
 	color: #1c222b;
 	box-shadow: 0 0 0 0 #e9bc8b, inset 6em 3.5em 0 0 #e9bc8b;
 	border-color: #e9bc8b;
+}
+
+@media (min-width: 900px) {
+	.title {
+		color: #19bc8b;
+		font-size: 50px;
+		align-items: center;
+	}
+
+	a {
+		width: 200px;
+	}
 }
