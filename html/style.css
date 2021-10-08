@@ -8,16 +8,18 @@ body {
 	align-items: center;
 	justify-content: center;
 	font-family: monospace;
+	color: rgba(255, 255, 255, 0.623);
+	font-size: 20px;
 }
 
 .title {
 	color: #19bc8b;
+	margin-top: 30px !important;
 	-webkit-transition: -webkit-transform 0.3s ease-in-out;
 	-moz-transition: -moz-transform 0.3s ease-in-out;
 	transition: all 0.1s ease-in-out;
 	font-size: 40px;
 	text-decoration: none;
-	margin: 70px auto 10px;
 }
 
 .title:hover {
@@ -41,18 +43,27 @@ body {
 	margin: auto;
 }
 
+.method {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 80vw;
+	text-align: justify;
+}
+
 .suggestion {
-	color: rgba(255, 255, 255, 0.623);
-	font-size: 20px;
 	margin: 5px;
 	text-align: center;
 	width: 80vw;
 	justify-self: center;
 }
 
-.bold-suggestion {
+.bold {
 	font-weight: bold;
 	color: rgba(255, 255, 255, 0.829);
+}
+
+.underlined {
+	text-decoration: underline;
 }
 
 input {

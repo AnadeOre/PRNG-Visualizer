@@ -7,14 +7,72 @@
 		<script src="../Scripts/Lehmer.js" defer></script>
 		<link rel="shortcut icon" href="../Assets/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="style.css" />
+		<script>
+			MathJax = {
+				tex: {
+					inlineMath: [
+						['$', '$'],
+						['\\(', '\\)'],
+					],
+					displayMath: [
+						// start/end delimiter pairs for display math
+						['$$', '$$'],
+						['\\[', '\\]'],
+					],
+				},
+				svg: {
+					fontCache: 'global',
+				},
+			};
+		</script>
+		<script src="check-for-tex.js" defer></script>
+		<script
+			type="text/javascript"
+			id="MathJax-script"
+			async
+			src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+		></script>
 		<title>Lehmer</title>
 	</head>
 	<body>
 		<a class="button-home" href="../index.html">Home</a>
 		<a href="../index.html" class="title">Lehmer</a>
+		<div class="method">
+			<p>
+				Lehmer's method is a type of "Linear Congruential Method" which operates in a multiplicative
+				group of integers modulo $m$.
+			</p>
+			<br />
+			<p>The recursive formula applied in the method is:</p>
+			<br />
+			$$x_{n+1} = ax_n \mod m.$$
+
+			<br />
+			<p>
+				There are many ways of choosing the numbers $a$, $m$ and the seed $x_0$. Different values
+				would cause the method to reach its <span class="underlined">period</span> faster when such
+				numbers are not "good enough".
+			</p>
+
+			<h3>Choosing $a, m$ and $x_0$</h3>
+
+			<p>
+				In general we want our choice of $m$ to be the highest possible prime number, this comes,
+				however, at a big computing cost. For this reason, it's very common to work with numbers $m$
+				that are a power of $2$. Doing so guarantees us that the period would be
+				<span class="bold">at most</span> $m/4$, which is pretty low, but this period would be even
+				smaller when $m$ is even. Due to this, a good option for $m$ is, for example $m = 2^{32}+1 =
+				4294967297$.
+			</p>
+			<br />
+			<p>
+				The best choice for $x_0$ is to make it coprime with $m$, this becomes a trivial task when
+				$m$ is prime and a bit more complicaten when it is not.
+			</p>
+		</div>
 		<p class="suggestion">
-			Suggested values: <span class="bold-suggestion">a = 16843009</span>,
-			<span class="bold-suggestion">m = 4294967296</span>
+			Suggested values: <span class="bold">$a = $16843009</span>,
+			<span class="bold">$m =$ 4294967297</span>
 		</p>
 		<div class="container">
 			<form>
