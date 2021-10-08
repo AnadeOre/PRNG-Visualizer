@@ -44,12 +44,10 @@ body {
 }
 
 .method {
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin: 20px auto 20px;
 	width: 80vw;
 	text-align: justify;
 }
-
 .suggestion {
 	margin: 5px;
 	text-align: center;
@@ -110,5 +108,10 @@ canvas {
 @media (min-width: 900px) {
 	.title {
 		margin: auto;
+	}
+	.method {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		width: 80vw;
 	}
 }
