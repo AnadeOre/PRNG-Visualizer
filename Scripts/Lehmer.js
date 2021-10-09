@@ -4,6 +4,7 @@ let a, m, seed;
 const aInput = document.getElementById('a')
 const mInput = document.getElementById('m')
 const seedInput = document.getElementById('seed')
+const warning = document.getElementById('warning')
 
 function refresh() {
   window.location.reload(false)
@@ -13,6 +14,11 @@ function runLehmer() {
   a = aInput.valueAsNumber;
   m = mInput.valueAsNumber;
   seed = seedInput.valueAsNumber;
+  if (isNaN(a) || isNaN(m) || isNaN(seed)) {
+    warning.classList.remove('hidden');
+    warning.classList.add('warning-visible');
+    return
+  }
   draw()
 }
 function nextRand() {

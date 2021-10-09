@@ -6,6 +6,7 @@ const jInput = document.getElementById('j')
 const kInput = document.getElementById('k')
 const mInput = document.getElementById('m')
 const seedInput = document.getElementById('seed')
+const warning = document.getElementById('warning')
 
 function refresh() {
   window.location.reload(false)
@@ -21,6 +22,11 @@ function runFibonacci() {
   seed = seed.map(num => {
     return parseInt(num)
   })
+  if (isNaN(j) || isNaN(k) || isNaN(m) || isNaN(seed)) {
+    warning.classList.remove('hidden');
+    warning.classList.add('warning-visible');
+    return
+  }
 
   draw()
 }

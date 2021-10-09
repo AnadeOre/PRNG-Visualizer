@@ -5,6 +5,7 @@ const aInput = document.getElementById('a')
 const cInput = document.getElementById('c')
 const mInput = document.getElementById('m')
 const seedInput = document.getElementById('seed')
+const warning = document.getElementById('warning')
 
 function refresh() {
   window.location.reload(false)
@@ -15,6 +16,11 @@ function runLCG() {
   c = parseInt(cInput.value);
   m = parseInt(mInput.value);
   seed = parseInt(seedInput.value);
+  if (isNaN(a) || isNaN(m) || isNaN(seed) || isNaN(c)) {
+    warning.classList.remove('hidden');
+    warning.classList.add('warning-visible');
+    return
+  }
   draw()
 }
 

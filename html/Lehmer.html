@@ -39,8 +39,12 @@
 		<a href="../index.html" class="title">Lehmer</a>
 		<div class="method">
 			<p>
-				Lehmer's method is a type of "Linear Congruential Method" which operates in a multiplicative
-				group of integers modulo $m$.
+				Lehmer's method is a type of "Prime Modulus Multiplicative Linear Congruential Generator"
+				which operates in a multiplicative group of integers modulo $m$. The genious of Lehmer's
+				algorithm is that if the multiplier $a$ and prime modulus $m$ are properly chosen, the
+				resulting sequence $\{x_n\}$ will be
+				<span class="bold">statistically indistinguishable</span> from a sequence drawn at random
+				from the set $\{1, 2, ..., m-1\}$.
 			</p>
 			<br />
 			<p>The recursive formula applied in the method is:</p>
@@ -54,6 +58,12 @@
 				numbers are not "good enough".
 			</p>
 
+			<p>
+				Let's take an example: $a=6$, $m=13$ and $x_0=1$; The resulting sequence is $\{1, 6, 10, 8,
+				9, 2, 12, 7, 3, 5, 4, 11, 1, ...\}$, which has a period of $12$.
+			</p>
+			<br />
+
 			<h3>Choosing $a, m$ and $x_0$</h3>
 
 			<p>
@@ -61,19 +71,33 @@
 				however, at a big computing cost. For this reason, it's very common to work with numbers $m$
 				that are a power of $2$. Doing so guarantees us that the period would be
 				<span class="bold">at most</span> $m/4$, which is pretty low, but this period would be even
-				smaller when $m$ is even. Due to this, a good option for $m$ is, for example $m = 2^{32}+1 =
-				4294967297$.
+				smaller when $m$ is even. Due to this, a good option for $m$ is, for example $m = 2^{31}-1 =
+				2147483647$.
 			</p>
 			<br />
 			<p>
 				The best choice for $x_0$ is to make it coprime with $m$, this becomes a trivial task when
-				$m$ is prime and a bit more complicaten when it is not.
+				$m$ is prime and a bit more complicaten when it is not. Lehmer suggested $a=7^{5}=16807$ and
+				$m=2^{31}-1$, which is a Mersenne prime number and $0< x_0< 2^{31}-1$. This choice of $a$
+				generates a full period function, which means it'll have a period of $m-1$
+			</p>
+			<br />
+
+			<h3>Drawing the sequence</h3>
+			<p>
+				You can now choose different values for $a$, $m$ and $x_0$ and the drawing will paint each
+				pixel black or white depending on weather the random number generated is smaller or greater
+				than $0.5$. A bad choice of $a$, $m$ and $x_0$ will result in an image with a recognizable
+				pattern.
 			</p>
 		</div>
+
 		<p class="suggestion">
-			Suggested values: <span class="bold">$a = $16843009</span>,
-			<span class="bold">$m =$ 4294967297</span>
+			Suggested values: <span class="bold">$a =$ 16807</span>,
+			<span class="bold">$m =$ 2147483647</span>
+			<span class="bold">$x_0 =$ 14</span>
 		</p>
+		<div id="warning" class="hidden">You must input proper integers</div>
 		<div class="container">
 			<form>
 				<input type="number" name="a" id="a" placeholder="a" />
@@ -81,7 +105,7 @@
 				<input type="number" name="seed" id="seed" placeholder="seed" />
 			</form>
 			<button onclick="runLehmer()">Draw</button>
-			<button onclick="refresh()">refresh</button>
+			<button onclick="refresh()">Refresh</button>
 		</div>
 		<canvas id="canvas" width="800" height="600"></canvas>
 	</body>

@@ -2,6 +2,8 @@ let canvas = document.getElementById('canvas')
 let context = canvas.getContext('2d');
 let seed, digits;
 const seedInput = document.getElementById('seed')
+const warning = document.getElementById('warning')
+
 
 function refresh() {
   window.location.reload(false)
@@ -10,6 +12,11 @@ function refresh() {
 function runMiddleSquare() {
   seed = seedInput.valueAsNumber;
   digits = seed.toString().split('').length;
+  if (isNaN(seed)) {
+    warning.classList.remove('hidden');
+    warning.classList.add('warning-visible');
+    return
+  }
   draw()
 }
 
